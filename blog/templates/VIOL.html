@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원본1</title>
+    <style>
+        table,
+        td,
+        tr {
+            border: black 1px solid;
+        }
+
+        #myTable {
+            background-color: blueviolet;
+            color: rgb(21, 142, 64);
+        }
+
+        body {
+            background-color: brown;
+        }
+
+        .돌아가기 {
+            background-color: darkcyan;
+            color: deeppink;
+        }
+
+        #돌아가기2:hover {
+            border: 2px solid #000000
+        }
+
+        .temp:hover {
+            border: 2px solid #ff0
+        }
+    </style>
+</head>
+
+<body>
+    <table border>
+        <tbody id="myTable">
+            <tr>
+                <td>월</td>
+                <td>화</td>
+                <td>수</td>
+                <td>목</td>
+                <td>금</td>
+                <td>토</td>
+                <td>일</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <input type="button" id=돌아가기2 class="돌아가기" value="돌아가기">
+    <script>
+        var 전체보기 = ['영어듣기', '영어독해', '영어어법', '영어회화', '영어가지치기', '수학', '국어문제', '독서', '악기', '<input type="textbox" class="temp" size=10px placeholder="특별할일">']
+        var 전체보기2 = [
+            ['영어듣기', '영어독해', '영어어법', '영어회화', '영어가지치기', '수학', '국어문제', '독서', '악기'],
+            ['영어듣기', '영어독해', '영어어법', '영어회화', '영어가지치기', '수학', '국어문제', '독서', '악기'],
+            ['영어듣기', '영어독해', '영어어법', '영어회화', '영어가지치기', '수학', '국어문제', '독서', '악기'],
+            ['영어듣기', '영어독해', '영어어법', '영어회화', '영어가지치기', '수학', '국어문제', '독서', '악기'],
+            ['영어듣기', '영어독해', '영어어법', '영어회화', '영어가지치기', '수학', '국어문제', '독서', '악기'],
+            ['영어듣기', '영어독해', '영어어법', '영어회화', '영어가지치기', '수학', '국어문제', '독서', '악기'],
+            ['영어듣기', '영어독해', '영어어법', '영어회화', '영어가지치기', '수학', '국어문제', '독서', '악기']
+        ]
+        for (var index = 0; index < 전체보기.length; index += 1) {
+            var a = '';
+            a += '<tr>';
+            for (var index2 = 0; index2 < 7; index2 += 1) {
+                a += '<td>' + 전체보기[index] + '<input type = checkbox></td>';
+            }
+            a += '</tr>';
+            document.getElementById("myTable").innerHTML += a;
+        }
+        function 코천의_강림() {
+            location.href = `./`
+        }
+        document.getElementById(`돌아가기2`).onclick = 코천의_강림
+    </script>
+</body>
